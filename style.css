@@ -715,7 +715,7 @@ body.dark-theme .brand-title {
   grid-template-columns: 320px 1fr;
   gap: 48px;
   align-items: center;
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .principal-card {
