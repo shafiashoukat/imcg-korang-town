@@ -105,7 +105,7 @@
       <div class="principal-grid">
         <!-- Photo: Office Portrait -->
         <div class="principal-card">
-          <img class="principal-photo" src="images/principal_office.jpeg" alt="Dr. Munazza Faheem, Principal of IMCG Korang Town in her administrative office">
+          <img class="principal-photo" src="images/principal_official.jpg" alt="Dr. Munazza Faheem, Principal of IMCG Korang Town">
           <div class="principal-photo-caption">DR. MUNAZZA FAHEEM &middot; PRINCIPAL</div>
         </div>
 
@@ -488,14 +488,14 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;" class="houses-grid">
           <!-- Peace House (Yellow) -->
           <div style="background: #ffffff; border: 2px solid #eab308; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 25px rgba(234, 179, 8, 0.12); transition: transform 0.2s;">
-            <div style="background: linear-gradient(135deg, #ca8a04 0%, #eab308 100%); color: #ffffff; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; background: rgba(0,0,0,0.2); padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">House #1</span>
-                <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; margin: 4px 0 0; color: #ffffff;">🟡 Peace House</h4>
+            <div style="height: 150px; overflow: hidden; position: relative;">
+              <img src="images/gallery_house_parade.jpg" alt="Peace House and Unity House Parade" style="width: 100%; height: 100%; object-fit: cover;">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(7,14,30,0.85) 0%, transparent 100%); padding: 12px 18px; color: #ffffff;">
+                <span style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; background: #eab308; color: #070e1e; padding: 2px 7px; border-radius: 4px; text-transform: uppercase;">House #1</span>
+                <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; margin: 3px 0 0; color: #ffffff;">🟡 Peace House</h4>
               </div>
-              <span style="font-size: 32px;">🕊️</span>
             </div>
-            <div style="padding: 22px;">
+            <div style="padding: 20px;">
               <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px;">
                 <span style="width: 14px; height: 14px; border-radius: 50%; background: #eab308; display: inline-block;"></span>
                 <b style="font-size: 13px; color: var(--navy);">Designated Color: Golden Yellow</b>
@@ -512,14 +512,14 @@
 
           <!-- Unity House (Red) -->
           <div style="background: #ffffff; border: 2px solid #ef4444; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 25px rgba(239, 68, 68, 0.12); transition: transform 0.2s;">
-            <div style="background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%); color: #ffffff; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; background: rgba(0,0,0,0.2); padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">House #2</span>
-                <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; margin: 4px 0 0; color: #ffffff;">🔴 Unity House</h4>
+            <div style="height: 150px; overflow: hidden; position: relative;">
+              <img src="images/gallery_unity_house_leaders.jpg" alt="Unity House Student Leaders" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(7,14,30,0.85) 0%, transparent 100%); padding: 12px 18px; color: #ffffff;">
+                <span style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; background: #ef4444; color: #ffffff; padding: 2px 7px; border-radius: 4px; text-transform: uppercase;">House #2</span>
+                <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; margin: 3px 0 0; color: #ffffff;">🔴 Unity House</h4>
               </div>
-              <span style="font-size: 32px;">🤝</span>
             </div>
-            <div style="padding: 22px;">
+            <div style="padding: 20px;">
               <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px;">
                 <span style="width: 14px; height: 14px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
                 <b style="font-size: 13px; color: var(--navy);">Designated Color: Crimson Red</b>
@@ -618,107 +618,237 @@
     </section>
 
 
-    <!-- FULL PHOTO GALLERY (6 COMPREHENSIVE PHOTOS) -->
+    <!-- FULL PHOTO GALLERY (20 AUTHENTIC HIGH-RES CAMPUS PHOTOS) -->
     <section class="section gallery-section" id="gallery">
       <div class="section-heading centered">
         <p class="eyebrow">VISUAL CHRONICLES</p>
         <h2>Campus <span>Gallery</span></h2>
         <p class="section-intro">
-          Click on any photograph to view it in high resolution.
+          Explore genuine moments of academic excellence, house competitions, art exhibitions, campus infrastructure, and student leadership at IMCG Korang Town. Click any photo to view in high resolution.
         </p>
       </div>
 
-      <div class="gallery-grid">
-        <!-- Photo 1: Hero Banner Panorama -->
-        <figure class="gallery-card" onclick="openLightbox('images/campus_entrance_enhanced.webp', 'Campus Overview & Entrance', 'Bright and colorful enhanced view of IMCG Korang Town campus entrance')">
+      <!-- Gallery Category Filters -->
+      <div class="gallery-filter-bar">
+        <button class="gallery-filter-btn active" onclick="filterGallery('all', this)">All Photographs (15)</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('campus', this)">Campus & Labs</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('houses', this)">House System & Parade</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('cocurricular', this)">Arts & Co-Curricular</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('events', this)">Events & Celebrations</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('leadership', this)">Leadership & Faculty</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Photo 1: Annual House Parade -->
+        <figure class="gallery-card" data-category="houses" onclick="openGalleryItem(0)">
           <div class="gallery-thumb-wrap">
-            <span class="gallery-badge">Campus Overview</span>
-            <img class="gallery-thumb" src="images/campus_entrance_enhanced.webp" alt="Campus Overview and Entrance">
+            <span class="gallery-badge">House System</span>
+            <img class="gallery-thumb" src="images/gallery_house_parade.jpg" alt="Annual House Parade & Assembly" loading="lazy">
             <span class="gallery-zoom-icon">🔍</span>
           </div>
           <figcaption class="gallery-caption">
-            <b>Campus Overview</b>
-            <small>Bright and vibrant view of IMCG Korang Town campus entrance</small>
+            <b>Annual House Parade & Assembly</b>
+            <small>Student prefects leading Unity House and Peace House parade through the campus courtyard</small>
           </figcaption>
         </figure>
 
-        <!-- Photo 2: College Building -->
-        <figure class="gallery-card" onclick="openLightbox('images/college_building.jpeg', 'Academic Block Exterior', 'Full view of the academic building and campus boundary wall')">
+        <!-- Photo 2: Modern IT & Computer Science Lab -->
+        <figure class="gallery-card" data-category="campus" onclick="openGalleryItem(1)">
           <div class="gallery-thumb-wrap">
-            <span class="gallery-badge">Infrastructure</span>
-            <img class="gallery-thumb" src="images/college_building.jpeg" alt="Academic Block Exterior">
+            <span class="gallery-badge">Campus & Labs</span>
+            <img class="gallery-thumb" src="images/gallery_computer_lab.jpg" alt="Modern IT & Computer Science Lab" loading="lazy">
             <span class="gallery-zoom-icon">🔍</span>
           </div>
           <figcaption class="gallery-caption">
-            <b>Academic Block Exterior</b>
-            <small>Multi-storey classroom block and college premises</small>
+            <b>Modern IT & Computer Science Lab</b>
+            <small>Faculty mentors guiding students at dedicated computer workstations with high-speed internet</small>
           </figcaption>
         </figure>
 
-        <!-- Photo 3: Main Entrance Gate -->
-        <figure class="gallery-card" onclick="openLightbox('images/campus_gate.webp', 'Main Entrance Gate', 'Formal entrance gate of Islamabad Model College for Girls, Korang Town')">
+        <!-- Photo 3: Unity House Student Leadership -->
+        <figure class="gallery-card" data-category="houses" onclick="openGalleryItem(2)">
           <div class="gallery-thumb-wrap">
-            <span class="gallery-badge">Campus Entrance</span>
-            <img class="gallery-thumb" src="images/campus_entrance_enhanced.webp" alt="Main Entrance Gate">
+            <span class="gallery-badge">House System</span>
+            <img class="gallery-thumb" src="images/gallery_unity_house_leaders.jpg" alt="Unity House Student Leadership" loading="lazy">
             <span class="gallery-zoom-icon">🔍</span>
           </div>
           <figcaption class="gallery-caption">
-            <b>Main Entrance Gate</b>
-            <small>Primary access gate welcoming students and faculty</small>
+            <b>Unity House Student Leadership</b>
+            <small>House prefects and class representatives holding the official Unity House insignia emblem</small>
           </figcaption>
         </figure>
 
-        <!-- Photo 4: Gathering Outside -->
-        <figure class="gallery-card" onclick="openLightbox('images/college_gathering.jpeg', 'Student & Community Assembly', 'Gathering of students, parents, and community members outside the college')">
+        <!-- Photo 4: Wall Mural Painting Competition -->
+        <figure class="gallery-card" data-category="cocurricular" onclick="openGalleryItem(3)">
           <div class="gallery-thumb-wrap">
-            <span class="gallery-badge">Campus Life</span>
-            <img class="gallery-thumb" src="images/college_gathering.jpeg" alt="Student and Community Assembly">
+            <span class="gallery-badge">Co-Curricular</span>
+            <img class="gallery-thumb" src="images/gallery_mural_painting.jpg" alt="Wall Mural Painting Competition" loading="lazy">
             <span class="gallery-zoom-icon">🔍</span>
           </div>
           <figcaption class="gallery-caption">
-            <b>Student & Community Assembly</b>
-            <small>Campus gatherings, morning rush, and community connection</small>
+            <b>Wall Mural Painting Contest</b>
+            <small>Fine Arts Society students collaborating on the vibrant 'Winter Blossom' mural on the campus walls</small>
           </figcaption>
         </figure>
 
-        <!-- Photo 5: Principal in Office -->
-        <figure class="gallery-card" onclick="openLightbox('images/principal_office.jpeg', 'Dr. Munazza Faheem (Principal)', 'Dr. Munazza Faheem, Principal of IMCG Korang Town in her office')">
+        <!-- Photo 5: Digital Literacy Workstation -->
+        <figure class="gallery-card" data-category="campus" onclick="openGalleryItem(4)">
           <div class="gallery-thumb-wrap">
-            <span class="gallery-badge">Leadership</span>
-            <img class="gallery-thumb" src="images/principal_office.jpeg" alt="Principal in Office">
+            <span class="gallery-badge">Campus & Labs</span>
+            <img class="gallery-thumb" src="images/gallery_digital_learning.jpg" alt="Digital Literacy & Independent Learning" loading="lazy">
             <span class="gallery-zoom-icon">🔍</span>
           </div>
           <figcaption class="gallery-caption">
-            <b>Dr. Munazza Faheem (Principal's Desk)</b>
-            <small>Administrative leadership, mentorship, and vision under Dr. Munazza Faheem</small>
+            <b>Digital Literacy & IT Education</b>
+            <small>Student engaged at a personal computer terminal during computer science practical coursework</small>
           </figcaption>
         </figure>
 
-        <!-- Photo 6: Principal Reception -->
-        <figure class="gallery-card" onclick="openLightbox('images/principal_ceremony.jpeg', 'Ceremonial Reception for Dr. Munazza Faheem', 'Dr. Munazza Faheem receiving floral honors during college ceremony')">
+        <!-- Photo 6: Inter-House Championship Trophies -->
+        <figure class="gallery-card" data-category="events" onclick="openGalleryItem(5)">
           <div class="gallery-thumb-wrap">
             <span class="gallery-badge">Events & Honors</span>
-            <img class="gallery-thumb" src="images/principal_ceremony.jpeg" alt="Ceremonial Reception">
+            <img class="gallery-thumb" src="images/gallery_trophy_stage.jpg" alt="Inter-House Championship Trophies" loading="lazy">
             <span class="gallery-zoom-icon">🔍</span>
           </div>
           <figcaption class="gallery-caption">
-            <b>Ceremonial Reception</b>
-            <small>Moments of tradition, honors, and celebration of leadership</small>
+            <b>Inter-House Championship Trophies</b>
+            <small>Silver victory cups and ceremonial awards prepared for academic and athletic achievers</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 7: Annual Prize Distribution -->
+        <figure class="gallery-card" data-category="events" onclick="openGalleryItem(6)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Events & Honors</span>
+            <img class="gallery-thumb" src="images/gallery_prize_distribution.jpg" alt="Annual Prize Distribution Ceremony" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Annual Prize Distribution Ceremony</b>
+            <small>Principal Dr. Munazza Faheem and faculty honoring the House Captain with the championship trophy</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 8: Floral Welcome Ceremony -->
+        <figure class="gallery-card" data-category="events" onclick="openGalleryItem(7)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Events & Honors</span>
+            <img class="gallery-thumb" src="images/gallery_ceremony_welcome.jpg" alt="Floral Welcome Ceremony" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Floral Welcome & Honors</b>
+            <small>Student council representatives presenting ceremonial bouquets and portfolios to the Principal</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 9: Fine Arts Mural Artists -->
+        <figure class="gallery-card" data-category="cocurricular" onclick="openGalleryItem(8)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Co-Curricular</span>
+            <img class="gallery-thumb" src="images/gallery_mural_artist_students.jpg" alt="Fine Arts & Creative Expression" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Fine Arts & Creative Expression</b>
+            <small>Students painting cherry blossoms and tree murals during the inter-house art competition</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 10: Arts & Crafts Expo -->
+        <figure class="gallery-card" data-category="cocurricular" onclick="openGalleryItem(9)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Co-Curricular</span>
+            <img class="gallery-thumb" src="images/gallery_arts_crafts_expo.jpg" alt="Arts, Crafts & Design Expo" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Annual Arts & Crafts Exhibition</b>
+            <small>Students showcasing handcrafted wool flowers, ornamental displays, and creative home economics work</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 11: Iqbal Day Auditorium Assembly -->
+        <figure class="gallery-card" data-category="events" onclick="openGalleryItem(10)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Events & Honors</span>
+            <img class="gallery-thumb" src="images/gallery_iqbal_day.jpg" alt="Iqbal Day & Cultural Celebrations" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Iqbal Day & Cultural Celebrations</b>
+            <small>Junior wing students presenting patriotic performances and national poetry in the auditorium</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 12: Principal's Keynote Address -->
+        <figure class="gallery-card" data-category="leadership" onclick="openGalleryItem(11)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Leadership</span>
+            <img class="gallery-thumb" src="images/gallery_principal_speech.jpg" alt="Principal's Keynote Address" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Principal's Keynote Address</b>
+            <small>Dr. Munazza Faheem addressing the college assembly under the official IMCG Korang Town crest</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 13: Faculty Assembly Hall -->
+        <figure class="gallery-card" data-category="leadership" onclick="openGalleryItem(12)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Leadership</span>
+            <img class="gallery-thumb" src="images/gallery_faculty_assembly.jpg" alt="Faculty Assembly & Mentorship" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Faculty Assembly & Mentorship</b>
+            <small>Dedicated teaching faculty and collegiate leaders assembled in the main collegiate hall</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 14: Lush Campus Botanical Gardens -->
+        <figure class="gallery-card" data-category="campus" onclick="openGalleryItem(13)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Campus & Labs</span>
+            <img class="gallery-thumb" src="images/gallery_campus_garden.jpg" alt="Lush Campus Botanical Gardens" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Lush Campus Botanical Gardens</b>
+            <small>Verdant lawns, flowering plants, and native green foliage surrounding the academic blocks</small>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 15: Competition Adjudication Panel -->
+        <figure class="gallery-card" data-category="cocurricular" onclick="openGalleryItem(14)">
+          <div class="gallery-thumb-wrap">
+            <span class="gallery-badge">Co-Curricular</span>
+            <img class="gallery-thumb" src="images/gallery_competition_judges.jpg" alt="Competition Adjudication Panel" loading="lazy">
+            <span class="gallery-zoom-icon">🔍</span>
+          </div>
+          <figcaption class="gallery-caption">
+            <b>Competition Adjudication Panel</b>
+            <small>Senior faculty evaluating student declamations, debates, and artistic presentations</small>
           </figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- LIGHTBOX MODAL POPUP -->
+    <!-- LIGHTBOX MODAL POPUP WITH NAVIGATION -->
     <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true" onclick="closeLightbox(event)">
       <div class="lightbox-content" onclick="event.stopPropagation()">
-        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image popup">×</button>
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image popup">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="changeLightboxItem(-1)" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" onclick="changeLightboxItem(1)" aria-label="Next image">&#10095;</button>
         <img id="lightboxImg" class="lightbox-img" src="" alt="Popup view">
         <div class="lightbox-meta">
           <div>
             <h4 id="lightboxTitle">Title</h4>
             <p id="lightboxDesc">Description</p>
           </div>
+          <span id="lightboxCounter" class="lightbox-counter">1 / 15</span>
         </div>
       </div>
     </div>

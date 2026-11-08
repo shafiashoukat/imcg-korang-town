@@ -832,10 +832,45 @@ body.dark-theme .brand-title {
   gap: 10px;
 }
 
-/* GALLERY SECTION - 6 PICTURE SHOWCASE */
+/* GALLERY SECTION - 20 PICTURE SHOWCASE */
 .gallery-section {
   background: #f8fafc;
 }
+
+/* Category Filter Bar */
+.gallery-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 36px;
+  max-width: 900px;
+}
+.gallery-filter-btn {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 9px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.gallery-filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold-dark);
+  transform: translateY(-2px);
+}
+.gallery-filter-btn.active {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+  box-shadow: 0 4px 14px rgba(14, 27, 56, 0.25);
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -847,10 +882,13 @@ body.dark-theme .brand-title {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: 0 8px 24px rgba(14, 27, 56, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+}
+.gallery-card.hidden {
+  display: none !important;
 }
 .gallery-card:hover {
   transform: translateY(-6px);
@@ -960,18 +998,19 @@ body.dark-theme .brand-title {
 }
 .lightbox-img {
   width: 100%;
-  max-height: 520px;
+  max-height: 540px;
   object-fit: contain;
   background: #0a1120;
   display: block;
 }
 .lightbox-meta {
-  padding: 20px 24px;
+  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
   border-top: 1px solid var(--border);
+  gap: 16px;
 }
 .lightbox-meta h4 {
   font-family: 'Playfair Display', Georgia, serif;
@@ -979,28 +1018,66 @@ body.dark-theme .brand-title {
   color: var(--navy);
 }
 .lightbox-meta p {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   margin-top: 2px;
+}
+.lightbox-counter {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  background: #f1f5f9;
+  padding: 5px 12px;
+  border-radius: 14px;
+  white-space: nowrap;
 }
 .lightbox-close {
   position: absolute;
   top: 14px;
   right: 14px;
-  background: rgba(14, 27, 56, 0.7);
+  background: rgba(14, 27, 56, 0.75);
   color: #ffffff;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+  z-index: 10;
+}
+.lightbox-close:hover {
+  background: var(--gold-dark);
+}
+.lightbox-nav {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: rgba(14, 27, 56, 0.75);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
   display: grid;
   place-items: center;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
+  z-index: 10;
 }
-.lightbox-close:hover {
+.lightbox-prev {
+  left: 16px;
+}
+.lightbox-next {
+  right: 16px;
+}
+.lightbox-nav:hover {
   background: var(--gold-dark);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.08);
 }
 
 /* Contact & Feedback Section */
@@ -1276,6 +1353,34 @@ body.dark-theme .admissions-intro,
 body.dark-theme .event-card p,
 body.dark-theme .faq-answer {
   color: #94a3b8 !important;
+}
+body.dark-theme .gallery-filter-btn {
+  background: #111d35 !important;
+  color: #cbd5e1 !important;
+  border-color: #1e3156 !important;
+}
+body.dark-theme .gallery-filter-btn:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold-light) !important;
+}
+body.dark-theme .gallery-filter-btn.active {
+  background: var(--gold) !important;
+  color: #070e1e !important;
+  border-color: var(--gold) !important;
+}
+body.dark-theme .lightbox-meta {
+  background: #0e1b38 !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+body.dark-theme .lightbox-meta h4 {
+  color: #ffffff !important;
+}
+body.dark-theme .lightbox-meta p {
+  color: #94a3b8 !important;
+}
+body.dark-theme .lightbox-counter {
+  background: #192c4f !important;
+  color: var(--gold-light) !important;
 }
 body.dark-theme .card-icon,
 body.dark-theme .facility-icon-wrap {
